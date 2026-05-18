@@ -8,6 +8,12 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+  res.sendFile("public/index.html", {
+    root: __dirname
+  });
+});
+
 const supabaseUrl = "https://ybufwnjmcylsojyhrvbg.supabase.co";
 const supabaseKey = "sb_publishable_ZNnsf8qviA8pvvSG-sPjjA_kaxcalyH";
 const supabase = createClient(supabaseUrl, supabaseKey);

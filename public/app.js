@@ -240,5 +240,3 @@ async function loadSearchHistory() {
 
   console.log("Past searches:", data);
 }
-
-loadSearchHistory();
