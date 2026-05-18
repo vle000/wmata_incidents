@@ -6,17 +6,17 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
+
+const supabaseUrl = "https://ybufwnjmcylsojyhrvbg.supabase.co";
+const supabaseKey = "sb_publishable_ZNnsf8qviA8pvvSG-sPjjA_kaxcalyH";
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.get("/", (req, res) => {
   res.sendFile("public/index.html", {
     root: __dirname
   });
 });
-
-const supabaseUrl = "https://ybufwnjmcylsojyhrvbg.supabase.co";
-const supabaseKey = "sb_publishable_ZNnsf8qviA8pvvSG-sPjjA_kaxcalyH";
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.get("/api/searches", async (req, res) => {
   const { data, error } = await supabase.from("searches").select("*");
