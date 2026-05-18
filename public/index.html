@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DC Transit Alerts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>DC Transit Alerts</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tutorial.html">Tutorial</a>
+  </nav>
+</header>
+
+<div class="search-bar">
+  <h2 id="type"></h2>
+  <input id="routeSearch" placeholder="Search route or line">
+  <button id="searchButton">Search</button>
+</div>
+
+<canvas id="incidentChart"></canvas>
+
+<div id="incidentList"></div>
+
+</body>
+</html>
