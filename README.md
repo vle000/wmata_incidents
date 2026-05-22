@@ -89,12 +89,9 @@ Used to:
 
 Used to:
 - Store recent user searches and store them into external database
-- Note: It is currently not fully functional
+- Used for monitoring user searches
 
 # Important Notes:
 - A 500 error may appear in the console when interacting with the search button in the homepage, although the search feature is working properly.
-- Sometimes, it shows up when more than 1 search appears in the Supabase
 # Future notes:
-- I plan to continue working on this project to fully finish it in one polished application. As of now, it's shown here to meet a deadline.
-- I hope I can use more time to develop the supabase connection to this project so it can properly insert and extract data from an external database.
 - CSS could use some work to make it more visually appealing. 
