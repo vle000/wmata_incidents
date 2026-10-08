@@ -1,6 +1,6 @@
 # WMATA Incidents Dashboard
 
-[NOTE: Code committed to wrong branch on 5/17, README copied here]
+[NOTE: Supabase security access maintenance underway]
 
 # Description:
 
