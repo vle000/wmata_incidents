@@ -31,6 +31,7 @@ This is the WMATA Incidents Dashboard. It is a web application that presents and
 - express
 - body-parser
 - @supabase/supabase-js
+- dotenv
 
 # Frontend Pages
 
