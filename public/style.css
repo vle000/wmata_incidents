@@ -35,11 +35,25 @@ nav a:hover {
     text-decoration: underline; 
 } 
 
+#about-text {
+    max-width: 100ch; 
+    margin-inline: auto;
+    margin-block: 1.5rem; 
+    line-height: 1.6;    
+    text-align: justify;
+}
+
+#type {
+    font-size: 1.2rem; 
+    font-weight: 600;
+}
+
 .search-bar { 
     margin: 16px auto; 
     max-width: 960px; 
     width: calc(100% - 48px); 
-    display: flex; gap: 8px; 
+    display: flex; 
+    gap: 8px; 
 } 
 
 .search-bar input { 
@@ -92,4 +106,12 @@ nav a:hover {
 img.logo {
     height: 80px;
     margin-right: 16px;
+}
+
+img.train-station-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
 }

@@ -225,9 +225,12 @@ document.addEventListener(
 
 new Typed("#type", {
   strings: [
-    "Red Line",
-    "Green Line",
-    "Silver Line"
+    "RD (for Red Line)",
+    "GR (for Green Line)",
+    "SV (for Silver Line)",
+    "BL (for Blue Line)",
+    "YL (for Yellow Line)",
+    "OR (for Orange Line)",
   ],
   typeSpeed: 50,
   backSpeed: 25,

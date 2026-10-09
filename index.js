@@ -1,15 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const { createClient } = require("@supabase/supabase-js");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
-
-const supabaseUrl = "https://ybufwnjmcylsojyhrvbg.supabase.co";
-const supabaseKey = "sb_publishable_ZNnsf8qviA8pvvSG-sPjjA_kaxcalyH";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.get("/", (req, res) => {
@@ -49,15 +49,17 @@ app.post("/api/search", async (req, res) => {
 
 app.get("/api/incidents", async (req, res) => {
   try {
+    const wmataKey = process.env.WMATA_API_KEY;
+
     const [busResponse, railResponse] = await Promise.all([
       fetch("https://api.wmata.com/Incidents.svc/json/BusIncidents", {
         headers: {
-          api_key: "bdb1718a7a4f4380b4bc7a9213ba4ac6"
+          api_key: wmataKey
         }
       }),
       fetch("https://api.wmata.com/Incidents.svc/json/Incidents", {
         headers: {
-          api_key: "bdb1718a7a4f4380b4bc7a9213ba4ac6"
+          api_key: wmataKey
         }
       })
     ]);
