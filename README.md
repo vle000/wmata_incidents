@@ -1,6 +1,6 @@
 # WMATA Incidents Dashboard
 
-[NOTE: Supabase security access maintenance underway]
+[NOTE: Security updates completed]
 
 # Description:
 
